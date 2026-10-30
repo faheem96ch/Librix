@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Librix – Library Management System</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="bk" viewBox="0 0 24 24"><path d="M2 5c3.5-1.2 7-.8 10 1.3v14C9 18.2 5.500 17.800 2 19z" fill="#16315a"/><path d="M22 5c-3.500-1.200-7-.8-10 1.300v14c3-2.100 6.500-1.500 10-.3z" fill="#f4b82a"/></symbol></svg>
+
+<div class="auth" id="auth"><div class="acard">
+ <div class="aleft"><div class="logo"><svg><use href="#bk"/></svg></div><h2>LIBRIX</h2><small>LIBRARY MANAGEMENT SYSTEM</small><p>Smart Library, Smarter Learning.</p><em>“A library is a hospital for the mind.”</em></div>
+ <div class="aright">
+  <form id="fLogin"><div class="eye">Library Management System</div><h1>Welcome – Access only Library Staff</h1><p class="sub">Login to your account</p>
+   <div class="err" id="lerr" hidden></div>
+   <div><label>Email / Name / ID</label><input id="lq" autocomplete="username" placeholder="Enter Email, Name or Staff ID"></div>
+   <div><label>Password</label><input id="lp" type="password" autocomplete="current-password" placeholder="Password"></div>
+   <button class="btn">Login</button><div class="sw">New user? <a data-sw="s">Sign Up</a></div></form>
+  <form id="fSign" hidden><div class="eye">Staff registration</div><h1>Create staff account</h1><p class="sub">Sign up to get access</p>
+   <div class="err" id="serr" hidden></div>
+   <div><label>Name</label><input id="sn" autocomplete="name"></div><div><label>Email</label><input id="se" type="email" autocomplete="email"></div>
+   <div><label>Staff ID</label><input id="si"></div><div><label>Password</label><input id="sp" type="password" autocomplete="new-password"></div>
+   <div><label>Confirm password</label><input id="sc" type="password" autocomplete="new-password"></div>
+   <button class="btn">Sign Up</button><div class="sw">Already registered? <a data-sw="l">Login</a></div></form>
+ </div></div></div>
+
+<div id="app" hidden>
+ <aside class="side"><div class="brand"><i><svg viewBox="0 0 24 24"><use href="#bk"/></svg></i><div><b>LIBRIX</b><small>LIBRARY SYSTEM</small></div></div>
+  <nav class="nav" id="nav"></nav></aside>
+ <div class="mc"><header class="bar"><div><b>LIBRIX</b> <em>/ <span id="crumb"></span></em></div><div class="user"><div><b id="uini">FM</b><small>Administrator</small></div><i id="uav">A</i></div></header>
+ <main id="view"></main></div>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
