@@ -7,13 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="Assets/logo-icon.png" type="image/png">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><symbol id="bk" viewBox="0 0 24 24"><path d="M2 5c3.5-1.2 7-.8 10 1.3v14C9 18.2 5.500 17.800 2 19z" fill="#0ea5e9"/><path d="M22 5c-3.500-1.200-7-.8-10 1.300v14c3-2.100 6.500-1.500 10-.3z" fill="#f4b82a"/></symbol></svg>
 
 <div class="auth" id="auth"><div class="acard">
- <div class="aleft"><div class="logo"><svg><use href="#bk"/></svg></div><h2>LIBRIX</h2><small>LIBRARY MANAGEMENT SYSTEM</small><p>Dawood University of Engineering and Technology Karachi / Project by a group of 6 students </p><em>“DBMS Project: Mem Poonam”</em></div>
+ <div class="aleft"><div class="logo"><img src="Assets/logo.png" alt="Librix – Library Management System"></div><h2>LIBRIX</h2><small>LIBRARY MANAGEMENT SYSTEM</small><p>Dawood University of Engineering and Technology Karachi / Project by a group of 6 students </p><em>“DBMS Project: Mem Poonam”</em></div>
  <div class="aright">
   <div class="tabs"><button type="button" class="tab on" data-tab="staff">Library Staff</button><button type="button" class="tab" data-tab="stu">Student Login</button></div>
   <form id="fLogin"><div class="eye">Library Management System</div><h1>Welcome – Library Staff</h1><p class="sub">Login to your account</p>
@@ -43,13 +44,13 @@
  </div></div></div>
 
 <div id="app" hidden>
- <aside class="side"><div class="brand"><i><svg viewBox="0 0 24 24"><use href="#bk"/></svg></i><div><b>LIBRIX</b><small>LIBRARY SYSTEM</small></div><button type="button" class="tg" id="sideTg" aria-label="Hide or show menu" aria-expanded="true" title="Hide / show menu">‹</button></div>
+ <aside class="side"><div class="brand"><i><img src="Assets/logo-icon.png" alt="Librix"></i><div><b>LIBRIX</b><small>LIBRARY SYSTEM</small></div><button type="button" class="tg" id="sideTg" aria-label="Hide or show menu" aria-expanded="true" title="Hide / show menu">‹</button></div>
   <nav class="nav" id="nav"></nav></aside>
  <div class="mc"><header class="bar"><div><b>LIBRIX</b> <em>/ <span id="crumb"></span></em></div><div class="user" data-act="profile" role="button" tabindex="0" title="My profile"><div><b id="uini">FM</b><small id="urole">Administrator</small></div><i id="uav">A</i></div></header>
  <main id="view"></main></div>
 </div>
 
-<script src="firebase-config.js"></script>
-<script src="app.js"></script>
+<script src="firebase-config.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>
